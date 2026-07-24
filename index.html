@@ -48,16 +48,6 @@
         .highlight { color: #4facfe; }
         .sub-text { font-size: 0.6em; color: #cccccc; margin-top: 10px; }
 
-        /* Q&A 슬라이드용 이미지 스타일 */
-        .qa-img {
-            max-height: 95vh !important;
-            max-width: 100vw !important;
-            margin: 0 !important;
-            border-radius: 0 !important;
-            box-shadow: none !important;
-            cursor: default !important; /* 클릭 확대 제외 */
-        }
-
         /* 모바일 세로 화면 최적화 (반응형) */
         @media screen and (max-width: 768px), screen and (orientation: portrait) {
             .reveal h2 { margin-bottom: 10px; }
@@ -72,7 +62,6 @@
             }
             .reveal p { font-size: 0.85em; margin: 10px 0; line-height: 1.3; }
             .sub-text { font-size: 0.5em; }
-            .qa-img { max-height: auto !important; width: 100% !important; }
         }
         
         /* BGM 버튼 스타일 (우측 상단) */
@@ -231,40 +220,21 @@
                 <h3 style="color: #4facfe;">다음 출조를 기다리며...</h3>
             </section>
 
+            <!-- Q&A 슬라이드 (배경 이미지 처리로 짤림 100% 방지) -->
             <!-- 8. Q&A 1 (QR 조인 화면) -->
-            <section data-background-color="#315eba">
-                <img src="qa.png" class="qa-img" alt="Q&A Join">
-            </section>
-
+            <section data-background-color="#315eba" data-background-image="qa.png" data-background-size="contain"></section>
             <!-- 9. Q&A 2 (질문 1) -->
-            <section data-background-color="#2d4a86">
-                <img src="qa1.png" class="qa-img" alt="Q&A 질문 1">
-            </section>
-
+            <section data-background-color="#2d4a86" data-background-image="qa1.png" data-background-size="contain"></section>
             <!-- 10. Q&A 3 (답변 1) -->
-            <section data-background-color="#2d4a86">
-                <img src="qaa1.png" class="qa-img" alt="Q&A 답변 1">
-            </section>
-
+            <section data-background-color="#2d4a86" data-background-image="qaa1.png" data-background-size="contain"></section>
             <!-- 11. Q&A 4 (질문 2) -->
-            <section data-background-color="#2d4a86">
-                <img src="qa2.png" class="qa-img" alt="Q&A 질문 2">
-            </section>
-
+            <section data-background-color="#2d4a86" data-background-image="qa2.png" data-background-size="contain"></section>
             <!-- 12. Q&A 5 (답변 2) -->
-            <section data-background-color="#2d4a86">
-                <img src="qaa2.png" class="qa-img" alt="Q&A 답변 2">
-            </section>
-
+            <section data-background-color="#2d4a86" data-background-image="qaa2.png" data-background-size="contain"></section>
             <!-- 13. Q&A 6 (질문 3) -->
-            <section data-background-color="#2d4a86">
-                <img src="qa3.png" class="qa-img" alt="Q&A 질문 3">
-            </section>
-
+            <section data-background-color="#2d4a86" data-background-image="qa3.png" data-background-size="contain"></section>
             <!-- 14. Q&A 7 (답변 3) -->
-            <section data-background-color="#2d4a86">
-                <img src="qaa3.png" class="qa-img" alt="Q&A 답변 3">
-            </section>
+            <section data-background-color="#2d4a86" data-background-image="qaa3.png" data-background-size="contain"></section>
 
         </div>
     </div>

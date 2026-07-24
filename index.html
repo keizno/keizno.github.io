@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>나의 취미낚시 이야기</title>
+    <title>나의 취미낚시 이야기 & Q&A</title>
     <!-- Reveal.js CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reset.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
@@ -34,34 +34,45 @@
             margin: 20px 0;
         }
         .img-container img {
-            max-height: 50vh; /* PC 화면에서 충분히 크게 */
+            max-height: 50vh; 
             max-width: 100%;
             object-fit: contain;
             border-radius: 12px;
             box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-            cursor: zoom-in; /* 클릭 가능함을 나타내는 돋보기 커서 */
+            cursor: zoom-in; 
             transition: transform 0.2s ease-in-out;
         }
         .img-container img:hover {
-            transform: scale(1.03); /* 마우스 올렸을 때 살짝 커지는 효과 */
+            transform: scale(1.03); 
         }
         .highlight { color: #4facfe; }
         .sub-text { font-size: 0.6em; color: #cccccc; margin-top: 10px; }
+
+        /* Q&A 슬라이드용 이미지 스타일 */
+        .qa-img {
+            max-height: 95vh !important;
+            max-width: 100vw !important;
+            margin: 0 !important;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+            cursor: default !important; /* 클릭 확대 제외 */
+        }
 
         /* 모바일 세로 화면 최적화 (반응형) */
         @media screen and (max-width: 768px), screen and (orientation: portrait) {
             .reveal h2 { margin-bottom: 10px; }
             .img-container {
-                flex-direction: column; /* 사진이 2장일 경우 위아래로 배치 */
+                flex-direction: column; 
                 gap: 10px;
                 margin: 10px 0;
             }
             .img-container img {
-                max-height: 35vh; /* 세로 모드일 때는 위아래가 안 잘리도록 축소 */
+                max-height: 35vh; 
                 max-width: 90vw;
             }
             .reveal p { font-size: 0.85em; margin: 10px 0; line-height: 1.3; }
             .sub-text { font-size: 0.5em; }
+            .qa-img { max-height: auto !important; width: 100% !important; }
         }
         
         /* BGM 버튼 스타일 (우측 상단) */
@@ -79,7 +90,7 @@
 
         /* 사진 크게 보기 (모달) 스타일 */
         #imageModal {
-            display: none; /* 기본은 숨김 */
+            display: none; 
             position: fixed; z-index: 10000;
             left: 0; top: 0; width: 100%; height: 100%;
             background-color: rgba(0, 0, 0, 0.9);
@@ -113,14 +124,14 @@
             text-decoration: none;
         }
         #qr-container img {
-            width: 70px; height: 70px; /* 적당한 크기 */
+            width: 70px; height: 70px; 
         }
         #qr-container span {
             color: #333; font-size: 0.5em; margin-top: 5px; font-weight: bold;
             font-family: 'Pretendard', sans-serif;
         }
         #qr-container.hide {
-            opacity: 0; visibility: hidden; /* 슬라이드 넘어가면 숨김 처리 */
+            opacity: 0; visibility: hidden; 
         }
         @media screen and (max-width: 768px) {
             #qr-container { top: 10px; left: 10px; padding: 5px; }
@@ -132,12 +143,11 @@
 <body>
     <!-- QR 코드 영역 (클릭 시 블로그 이동) -->
     <a href="https://keizno.github.io/" target="_blank" id="qr-container">
-        <!-- 구글 QR API를 사용하여 실시간으로 QR 이미지를 생성해 가져옵니다 -->
         <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://keizno.github.io/" alt="블로그 QR">
         <span>Go to Blog</span>
     </a>
 
-    <!-- 배경음악 (로컬 bgm.mp3 파일로 설정) -->
+    <!-- 배경음악 -->
     <button id="bgm-btn">🎵 BGM 재생</button>
     <audio id="bgm-audio" loop>
         <source src="bgm.mp3" type="audio/mpeg">
@@ -218,8 +228,45 @@
                     ✔ 매번 다른 결과를 손에 쥐는 즐거움
                 </p>
                 <br><br>
-                <h3 style="color: #4facfe;">다음 출조를 기다리며...</h3>
+                <h3 style="color: #4facfe;">감사합니다. 이제 Q&A를 진행하겠습니다.</h3>
+                <p style="font-size: 0.5em; color: rgba(255,255,255,0.4); margin-top: 30px;">(다음 장으로 넘겨주세요)</p>
             </section>
+
+            <!-- 8. Q&A 1 (QR 조인 화면) -->
+            <section data-background-color="#315eba">
+                <img src="화면 캡처 2026-07-24 200619.jpg" class="qa-img" alt="Q&A Join">
+            </section>
+
+            <!-- 9. Q&A 2 (질문 1) -->
+            <section data-background-color="#2d4a86">
+                <img src="화면 캡처 2026-07-24 202604.jpg" class="qa-img" alt="Q&A 질문 1">
+            </section>
+
+            <!-- 10. Q&A 3 (답변 1) -->
+            <section data-background-color="#2d4a86">
+                <img src="화면 캡처 2026-07-24 202635.jpg" class="qa-img" alt="Q&A 답변 1">
+            </section>
+
+            <!-- 11. Q&A 4 (질문 2) -->
+            <section data-background-color="#2d4a86">
+                <img src="화면 캡처 2026-07-24 202702.jpg" class="qa-img" alt="Q&A 질문 2">
+            </section>
+
+            <!-- 12. Q&A 5 (답변 2) -->
+            <section data-background-color="#2d4a86">
+                <img src="화면 캡처 2026-07-24 202758.jpg" class="qa-img" alt="Q&A 답변 2">
+            </section>
+
+            <!-- 13. Q&A 6 (질문 3) -->
+            <section data-background-color="#2d4a86">
+                <img src="화면 캡처 2026-07-24 202829.jpg" class="qa-img" alt="Q&A 질문 3">
+            </section>
+
+            <!-- 14. Q&A 7 (답변 3) -->
+            <section data-background-color="#2d4a86">
+                <img src="화면 캡처 2026-07-24 202845.jpg" class="qa-img" alt="Q&A 답변 3">
+            </section>
+
         </div>
     </div>
 
@@ -232,13 +279,12 @@
             controls: true,
             progress: true,
             center: true,
-            margin: 0.04, // 기본 여백으로 되돌려 PC 해상도 활용 극대화
+            margin: 0.04, 
         });
 
         // 슬라이드 이동 시 QR 코드 숨김/표시 처리
         const qrContainer = document.getElementById('qr-container');
         Reveal.on('slidechanged', event => {
-            // event.indexh가 0이면 첫 페이지
             if (event.indexh === 0) {
                 qrContainer.classList.remove('hide');
             } else {
@@ -270,7 +316,6 @@
         images.forEach(img => {
             img.addEventListener('click', function() {
                 modal.style.display = 'flex';
-                // 약간의 딜레이를 주어 opacity transition 효과 적용
                 setTimeout(() => modal.classList.add('show'), 10); 
                 modalImg.src = this.src;
             });

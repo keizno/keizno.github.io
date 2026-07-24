@@ -16,36 +16,40 @@
             font-family: 'Pretendard', sans-serif;
             text-transform: none;
             font-weight: 700;
+            margin-bottom: 10px; /* 제목 아래 여백 축소 */
         }
         .reveal p {
             font-family: 'Pretendard', sans-serif;
             font-weight: 400;
-            line-height: 1.6;
+            line-height: 1.4; /* 줄간격 살짝 축소 */
+            margin: 10px 0; /* 문단 위아래 여백 축소 */
         }
         .img-container {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            align-items: center;
+            gap: 15px;
+            margin: 10px 0; /* 이미지 위아래 여백 축소 */
         }
         .img-container img {
-            max-height: 45vh;
-            object-fit: cover;
+            max-height: 35vh; /* 화면 잘림 방지를 위해 이미지 최대 높이 축소 (기존 45vh -> 35vh) */
+            max-width: 100%;
+            object-fit: contain;
             border-radius: 12px;
             box-shadow: 0 10px 20px rgba(0,0,0,0.5);
         }
         .highlight { color: #4facfe; }
-        .sub-text { font-size: 0.6em; color: #cccccc; }
+        .sub-text { font-size: 0.55em; color: #cccccc; margin-top: 5px; }
         
-        /* BGM 버튼 스타일 (위치를 우측 상단으로 변경) */
+        /* BGM 버튼 스타일 (우측 상단) */
         #bgm-btn {
-            position: fixed; top: 30px; right: 30px; z-index: 9999;
+            position: fixed; top: 20px; right: 20px; z-index: 9999;
             background: rgba(255, 255, 255, 0.1); color: white;
             border: 1px solid rgba(255, 255, 255, 0.3);
             backdrop-filter: blur(10px);
-            padding: 12px 24px; border-radius: 30px;
+            padding: 10px 20px; border-radius: 30px;
             cursor: pointer; font-family: 'Pretendard', sans-serif;
+            font-size: 0.9em;
             transition: all 0.3s ease;
         }
         #bgm-btn:hover { background: rgba(255, 255, 255, 0.2); }
@@ -64,16 +68,16 @@
             <section data-background-gradient="linear-gradient(135deg, #0f2027, #203a43, #2c5364)">
                 <h1>나의 취미<span class="highlight">낚시</span> 이야기</h1>
                 <h3>바다와 함께한 순간들</h3>
-                <p style="margin-top: 50px; font-size: 0.6em; color: rgba(255,255,255,0.5);">방향키(→)나 스와이프를 통해 넘겨보세요</p>
+                <p style="margin-top: 40px; font-size: 0.6em; color: rgba(255,255,255,0.5);">방향키(→)나 스와이프를 통해 넘겨보세요</p>
             </section>
 
             <!-- 2. 자갈 해변 -->
             <section data-background-gradient="linear-gradient(135deg, #141e30, #243b55)">
                 <h2>01 자갈 해변 <span class="highlight">던질낚시</span></h2>
                 <div class="img-container">
-                    <img src="1624516946935.jpg" alt="자갈 해변 낚시" onerror="this.src='https://via.placeholder.com/400x500?text=Image+1624516946935.jpg'">
+                    <img src="1624516946935.jpg" alt="자갈 해변 낚시" onerror="this.src='https://via.placeholder.com/400x400?text=Image+1'">
                 </div>
-                <p style="font-size: 0.7em;">몽돌 해변에 릴대를 세워두고 던질낚시를 즐깁니다.<br>파도가 밀려오는 해안선을 바라보며 입질을 기다리는 시간이 즐겁습니다.</p>
+                <p style="font-size: 0.65em;">몽돌 해변에 릴대를 세워두고 던질낚시를 즐깁니다.<br>파도가 밀려오는 해안선을 바라보며 입질을 기다리는 시간이 즐겁습니다.</p>
                 <p class="sub-text">이 날의 조과: 전갱이 한 마리 — 흐린 하늘 아래 첫 입질</p>
             </section>
 
@@ -81,19 +85,19 @@
             <section data-background-gradient="linear-gradient(135deg, #141e30, #243b55)">
                 <h2>02 한밤의 <span class="highlight">장어</span> 손맛</h2>
                 <div class="img-container">
-                    <img src="eel1.jpg" alt="장어 낚시 1" onerror="this.src='https://via.placeholder.com/300x500?text=eel1.jpg'">
-                    <img src="eel2.jpg" alt="장어 낚시 2" onerror="this.src='https://via.placeholder.com/300x500?text=eel2.jpg'">
+                    <img src="eel1.jpg" alt="장어 낚시 1" onerror="this.src='https://via.placeholder.com/300x400?text=eel1.jpg'">
+                    <img src="eel2.jpg" alt="장어 낚시 2" onerror="this.src='https://via.placeholder.com/300x400?text=eel2.jpg'">
                 </div>
-                <p style="font-size: 0.7em;">가로등 불빛 아래, 방파제에서 늦은 밤까지 기다린 끝에 올라온 장어.<br>어둠 속 조용한 파도 소리와 릴 감는 소리만 남는 순간입니다.</p>
+                <p style="font-size: 0.65em;">가로등 불빛 아래, 방파제에서 늦은 밤까지 기다린 끝에 올라온 장어.<br>어둠 속 조용한 파도 소리와 릴 감는 소리만 남는 순간입니다.</p>
             </section>
 
             <!-- 4. 저수지 -->
             <section data-background-gradient="linear-gradient(135deg, #141e30, #243b55)">
                 <h2>03 저수지에서의 <span class="highlight">여유</span></h2>
                 <div class="img-container">
-                    <img src="1694062803074.jpg" alt="저수지 낚시" onerror="this.src='https://via.placeholder.com/400x500?text=Image+1694062803074.jpg'">
+                    <img src="1694062803074.jpg" alt="저수지 낚시" onerror="this.src='https://via.placeholder.com/400x400?text=Image+3'">
                 </div>
-                <p style="font-size: 0.7em;">바다뿐 아니라 저수지나 담수 포인트에서도 낚싯대를 드리웁니다.<br>따뜻한 봄날, 커피 한 잔과 함께하는 출조도 큰 즐거움입니다.</p>
+                <p style="font-size: 0.65em;">바다뿐 아니라 저수지나 담수 포인트에서도 낚싯대를 드리웁니다.<br>따뜻한 봄날, 커피 한 잔과 함께하는 출조도 큰 즐거움입니다.</p>
                 <p class="sub-text">다이와 토너먼트 베스트로 소품 정리 완료!</p>
             </section>
 
@@ -101,27 +105,27 @@
             <section data-background-gradient="linear-gradient(135deg, #141e30, #243b55)">
                 <h2>04 방파제 <span class="highlight">볼락</span> 포인트</h2>
                 <div class="img-container">
-                    <img src="1682901625277.jpg" alt="볼락 낚시인" onerror="this.src='https://via.placeholder.com/300x500?text=Image+1682901625277.jpg'">
-                    <img src="1682901621823.jpg" alt="볼락 조과" onerror="this.src='https://via.placeholder.com/300x500?text=Image+1682901621823.jpg'">
+                    <img src="1682901625277.jpg" alt="볼락 낚시인" onerror="this.src='https://via.placeholder.com/300x400?text=Image+4'">
+                    <img src="1682901621823.jpg" alt="볼락 조과" onerror="this.src='https://via.placeholder.com/300x400?text=Image+5'">
                 </div>
-                <p style="font-size: 0.7em;">테트라포드 사이사이를 노리는 볼락·쏨뱅이 낚시.<br>흐린 날씨에도 방한복 하나 걸치고 나가면 어느새 짜릿한 입질이 옵니다.</p>
+                <p style="font-size: 0.65em;">테트라포드 사이사이를 노리는 볼락·쏨뱅이 낚시.<br>흐린 날씨에도 방한복 하나 걸치고 나가면 어느새 짜릿한 입질이 옵니다.</p>
             </section>
 
             <!-- 6. 무늬오징어 -->
             <section data-background-gradient="linear-gradient(135deg, #141e30, #243b55)">
                 <h2>05 무늬오징어 <span class="highlight">에깅</span> 도전</h2>
                 <div class="img-container">
-                    <img src="squid1.jpg" alt="무늬오징어 1" onerror="this.src='https://via.placeholder.com/300x500?text=squid1.jpg'">
-                    <img src="squid2.jpg" alt="무늬오징어 2" onerror="this.src='https://via.placeholder.com/300x500?text=squid2.jpg'">
+                    <img src="squid1.jpg" alt="무늬오징어 1" onerror="this.src='https://via.placeholder.com/300x400?text=squid1.jpg'">
+                    <img src="squid2.jpg" alt="무늬오징어 2" onerror="this.src='https://via.placeholder.com/300x400?text=squid2.jpg'">
                 </div>
-                <p style="font-size: 0.7em;">'에기'를 던지고 감아오며 묵직한 입질을 기다립니다.<br>특유의 손맛과 눈앞에서 보는 다채로운 체색 변화가 매력적입니다.</p>
+                <p style="font-size: 0.65em;">'에기'를 던지고 감아오며 묵직한 입질을 기다립니다.<br>특유의 손맛과 눈앞에서 보는 다채로운 체색 변화가 매력적입니다.</p>
             </section>
 
             <!-- 7. 마무리 -->
             <section data-background-gradient="linear-gradient(135deg, #0f2027, #203a43, #2c5364)">
                 <h2>낚시가 <span class="highlight">좋은 이유</span></h2>
                 <br>
-                <p style="font-size: 0.8em; text-align: left; display: inline-block;">
+                <p style="font-size: 0.75em; text-align: left; display: inline-block; line-height: 1.8;">
                     ✔ 바다든 저수지든, 자연 속에서 조용히 집중하는 시간<br>
                     ✔ 입질 한 번을 위해 몇 시간을 기다리는 설렘<br>
                     ✔ 매번 다른 결과를 손에 쥐는 즐거움
@@ -141,6 +145,7 @@
             controls: true,
             progress: true,
             center: true,
+            margin: 0.1, // 슬라이드 상하좌우 여백을 넉넉하게 주어 짤림 방지
         });
 
         // BGM 컨트롤 로직

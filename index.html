@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>나의 취미낚시 이야기</title>
-    <!-- Reveal.js CSS (HTML을 PPT처럼 만들어주는 라이브러리) -->
+    <!-- Reveal.js CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reset.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/black.min.css">
@@ -38,9 +38,9 @@
         .highlight { color: #4facfe; }
         .sub-text { font-size: 0.6em; color: #cccccc; }
         
-        /* BGM 버튼 스타일 */
+        /* BGM 버튼 스타일 (위치를 우측 상단으로 변경) */
         #bgm-btn {
-            position: fixed; bottom: 30px; right: 30px; z-index: 9999;
+            position: fixed; top: 30px; right: 30px; z-index: 9999;
             background: rgba(255, 255, 255, 0.1); color: white;
             border: 1px solid rgba(255, 255, 255, 0.3);
             backdrop-filter: blur(10px);
@@ -52,10 +52,10 @@
     </style>
 </head>
 <body>
-    <!-- 배경음악 (에릭 사티 - 짐노페디 1번) -->
+    <!-- 배경음악 (로컬 bgm.mp3 파일로 설정) -->
     <button id="bgm-btn">🎵 BGM 재생</button>
     <audio id="bgm-audio" loop>
-        <source src="https://upload.wikimedia.org/wikipedia/commons/3/30/Erik_Satie_-_Gymnop%C3%A9die_No._1.ogg" type="audio/ogg">
+        <source src="bgm.mp3" type="audio/mpeg">
     </audio>
 
     <div class="reveal">
@@ -136,11 +136,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
     <script>
         Reveal.initialize({
-            hash: true,          // URL 해시 활성화 (새로고침 시 해당 슬라이드 유지)
-            transition: 'slide', // 화면 전환 효과 (none/fade/slide/convex/concave/zoom)
-            controls: true,      // 우측 하단 컨트롤러 표시
-            progress: true,      // 하단 진행바 표시
-            center: true,        // 내용 중앙 정렬
+            hash: true,
+            transition: 'slide',
+            controls: true,
+            progress: true,
+            center: true,
         });
 
         // BGM 컨트롤 로직
